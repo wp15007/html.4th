@@ -219,6 +219,14 @@ textarea {height: 110px}
 input[type="submit"] {width: 200px;
                       background-color: #cef178;}
 
+input:required, input:invalid{background-image: url(caution.png);
+                background-repeat: no-repeat;
+                background-position: right center;}
+
+input:valid {background-image: none;
+            }
+
+label span {color: #ff0000;}
 /*============PC用の設定-----------------*/
 @media only screen and (min-width: 900px) {
 
@@ -413,7 +421,7 @@ article section figure {margin-left:0}
 <header id="pageheader">
 <h1>Green Leaf</h1>
 <h2>生活を楽しくする情報をもっと身近にお届けします</h2>
-</div>
+
 
 <!-- メニュー -->
 <nav>
@@ -426,12 +434,12 @@ article section figure {margin-left:0}
 </ul>
 </nav>
 
-<img src="header.jpg" alt="">
+<img src="header.jpg" alt="" width="900" height="300">
 </header>
 
 <!-- コンテンツ -->
 <article>
-<header>
+<header id="postheader">
 	
 	<h1>お問い合わせ</h1>
 	
@@ -444,16 +452,23 @@ article section figure {margin-left:0}
 <input type="hidden" name="_done" value="http://www.www.www/" />
 <input type="hidden" name="_subject" value="FORM MAIL" />
 
-<p><label>名前：<br>
-<input type="text" name="namae" size="40">
+<p><label>名前<span>（必須）</span>：<br>
+<input type="text" name="namae" size="40" required
+placeholder="名前を入力してください" autofocus >
 </label></p>
 
-<p><label>メールアドレス：<br>
-	<input type="text" name="mail" size="40"></label>
+<p><label>メールアドレス<span>（必須）</span>：<br>
+	<input type="email" name="mail" size="40" required
+	placeholder="メールアドレスを入力してください"></label>
 </p>
 
+<p><label>URL :<br>
+<input type="url" name="url" size="40"
+placeholder="ホームページのURLを入力してください"></label></p>
+
 <p><label>コメント：<br>
-	<textarea name="comment" cols="50" rows="8"></textarea></label>
+	<textarea name="comment" cols="50" rows="8"
+	placeholder="コメントなどを入力してください"></textarea></label>
 </p>
 
 <p id="button">
@@ -471,7 +486,6 @@ Powered by <a href="http://www.rescue.ne.jp/">CGI RESCUE</a><sup>&reg;</sup> ／
 Copyright (C) <a href="mailto:forest@web.mail">Forest Studio</a>
 </small>
 </footer>
-</div>
 
 </div>
 
