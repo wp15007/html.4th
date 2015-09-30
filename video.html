@@ -1,18 +1,8 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-68216423-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
 <meta charset="utf-8">
-<title>お問い合わせ</title>
+<title>川の中の風景</title>
 <meta name="viewport" content="width=device-width,maximum-scale=1">
 <link href='https://fonts.googleapis.com/css?family=Righteous' rel='stylesheet' type='text/css'>
 <style>
@@ -20,8 +10,6 @@
 body {font-family: ' メイリオ ','hiragino kaku Gothic Pro' sans-serif;
       background-color: #e5e5e5;
       margin 0;
-      text-align: justify;
-      text-justify:inter-ideograph;
      }
 
 a	{color: #017acd}
@@ -194,7 +182,7 @@ small::before {content: 'GREEN LEAF';
                -moz-transform: rotate(-45deg) translate(62px, 20px);
                -o-transform: rotate(-45deg) translate(62px, 20px);
                -ms-transform: rotate(-45deg) translate(62px, 20px);
-               overflow: hideen;}
+              }
 
 /* 画像の配置 */
 figure {margin: 0;}
@@ -213,33 +201,10 @@ article section figcaption {color: #666666;
 
 article section:nth-of-type(odd) figcaption {text-align: right}
 
-/* フォーム */
-form {max-width: 500px;
-      margin: 30px auto;}
+/*--ビデオ--*/
+article {text-align: center;
+         margin: 30px 0 100px;}
 
-
-input,textarea {width: 100%;
-                box-sizing: border-box;
-                -webkit-box-sizing: border;
-                -moz-box-sizing: border-box;
-                border: solid 1px #aaaaaa;
-                border-radius: 0;
-                -webkit-appearance:none;
-            }
-
-textarea {height: 110px}
-
-input[type="submit"] {width: 200px;
-                      background-color: #cef178;}
-
-input:required, input:invalid{background-image: url(caution.png);
-                background-repeat: no-repeat;
-                background-position: right center;}
-
-input:valid {background-image: none;
-            }
-
-label span {color: #ff0000;}
 /*============PC用の設定-----------------*/
 @media only screen and (min-width: 900px) {
 
@@ -295,6 +260,9 @@ article + section + section {margin: 0}
 
     nav ul {font-size: 10px;}
     nav ul li a {width: 100px;}
+
+    video {width: 480px;
+           height: 270px;}
 }
 
 /*===================スマートフォン用の設定================*/
@@ -341,6 +309,8 @@ article + section + section {margin: 0}
                              {text-align: center;
                               margin-bottom: 15px;
                           }
+    video {width: 280px;
+           height: 157px;}
 }
 
 </style>
@@ -424,13 +394,6 @@ article section figure {margin-left:0}
 </style>
 <![endif]-->
 
-
-
-
-
-
-
-
 </head>
 <body>
 
@@ -439,9 +402,6 @@ article section figure {margin-left:0}
 
 <!-- ヘッダー -->
 <header id="pageheader">
-
-<!-- canvasを入れようとしたがautofocusとぶつかるみたいでうまくいかなかった。 -->
-
 <h1>Green Leaf</h1>
 <h2>生活を楽しくする情報をもっと身近にお届けします</h2>
 
@@ -453,52 +413,25 @@ article section figure {margin-left:0}
 <li><a href="about.html">森の工房について</a></li>
 <li><a href="event.html">季節のイベント</a></li>
 <li><a href="contact.html">お問い合わせ</a></li>
-<li><a href="video.html">川の中の風景</a></li>
+<li><a href="http://blog.xxx.xxx/">ブログ</a></li>
 </ul>
 </nav>
 
-<img src="header.jpg" alt="" width="900" height="300">
+<!--<img src="header.jpg" alt="" width="900" height="300">イメージを消す-->
 </header>
 
 <!-- コンテンツ -->
 <article>
-<header id="postheader">
-	
-	<h1>お問い合わせ</h1>
-	
-	<p id="summary">ご意見、ご感想などがありましたら、以下の欄にご記入の上、送信してください。また、森の工房やイベントに関するご質問などもお気軽にお寄せください。<br />
-	（※送信後はトップページに戻ります。）</p>
-</header>
 
-<form action="https://www.rescuesolutions.net/form/mail.cgi" method="POST">
-<input type="hidden" name="_uid" value="XXXXXXXX" />
-<input type="hidden" name="_done" value="http://www.www.www/" />
-<input type="hidden" name="_subject" value="FORM MAIL" />
+<h1>川の中の風景</h1>
 
-<p><label>名前<span>（必須）</span>：<br>
-<input type="text" name="namae" size="40" required
-placeholder="名前を入力してください" autofocus >
-</label></p>
+<video width="640" height="360" controls poster="video.jpg">
+<source src="sample.mp4" type="video/mp4">
+<source src="sample.webm" type="video/webm">
 
-<p><label>メールアドレス<span>（必須）</span>：<br>
-	<input type="email" name="mail" size="40" required
-	placeholder="メールアドレスを入力してください"></label>
-</p>
-
-<p><label>URL :<br>
-<input type="url" name="url" size="40"
-placeholder="ホームページのURLを入力してください"></label></p>
-
-<p><label>コメント：<br>
-	<textarea name="comment" cols="50" rows="8"
-	placeholder="コメントなどを入力してください"></textarea></label>
-</p>
-
-<p id="button">
-<input type="submit" value="送信">
-</p>
-
-</form>
+<p>川の中の風景を撮影した動画です。<br>
+<a href="sample.mp4">sample.mp4</a></p>
+</video>
 
 </article>
 
